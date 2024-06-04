@@ -1,0 +1,627 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    margin: 0 0 10px 0;
+}
+
+.main .container {
+    max-width: 100%;
+    max-height: 100vh;
+    padding: 20px 50px;
+    margin: 20px 20px 30px 20px;
+
+}
+
+.main .popup-form {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(9, 8, 8, 0.6);
+}
+
+.popup-form .popup-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 6px rgba(192, 190, 190, 0.5), 0 1px 3px rgba(206, 203, 203, 0.8);
+}
+
+.popup-form .popup-content .close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.popup-form .popup-content .close-btn:hover,
+.popup-form .popup-content .close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.popup-form .popup-content h2 {
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    color: #272626;
+    margin-bottom: 20px;
+}
+
+.popup-form .popup-content form {
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.popup-form .popup-content form .form-field1{
+    width: 100%;
+}
+
+.popup-form .popup-content form .nameBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-form .popup-content form input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #a3a1a1;
+    margin-bottom: 20px;
+    padding: 8px 5px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    outline: none;
+    color: #5d5c5c;
+}
+
+.popup-form .popup-content form .form-field1,
+.popup-form .popup-content form .nameBox .form-field2,
+.popup-form .popup-content form .nameBox .form-field3{
+    position: relative;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.popup-form .popup-content form .form-field1 label,
+.popup-form .popup-content form .nameBox .form-field2 label,
+.popup-form .popup-content form .nameBox .form-field3 label{
+    color: #5d5c5c;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    opacity: 0;
+}
+
+.popup-form .popup-content form .nameBox .form-field2,
+.popup-form .popup-content form .nameBox .form-field3{
+    width: 50%;
+}
+
+.popup-form .popup-content form .nameBox .form-field2{
+    margin-right: 50px;
+}
+
+.popup-form .popup-content form .form-field1 input:focus~label,
+.popup-form .popup-content form .nameBox .form-field2 input:focus~label,
+.popup-form .popup-content form .nameBox .form-field3 input:focus~label,
+.popup-form .popup-content form .form-field1 input:not(:placeholder-shown)~label,
+.popup-form .popup-content form .nameBox .form-field2 input:not(:placeholder-shown)~label,
+.popup-form .popup-content form .nameBox .form-field3 input:not(:placeholder-shown)~label {
+    top: -25px;
+    opacity: 1;
+}
+
+.popup-form .popup-content form p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #757272;
+    font-weight: 450;
+}
+
+.popup-form .popup-content form p #check {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.popup-form .popup-content form button {
+    width: 90%;
+    height: 60px;
+    color: #fff;
+    background-color: #f12d64;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 20px 0 15px 0;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.main .container-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-contact .contact-left {
+    width: 50%;
+    padding: 5px 10px;
+    align-content: center;
+}
+
+.container-contact .contact-left h3 {
+    color: #ec0b4b;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.container-contact .contact-left h1 {
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    color: #000;
+}
+
+.container-contact .contact-left p {
+    font-size: 1.3rem;
+    margin-bottom: 45px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+}
+
+.container-contact .contact-left button {
+    margin-top: 20px;
+    width: 180px;
+    height: 55px;
+    background-color: #ed0631;
+    color: #fde5e5;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+}
+
+.container-contact .contact-right {
+    width: 50%;
+}
+
+.container-contact .contact-right img {
+    width: 85%;
+    height: 100vh;
+    margin-left: 50px;
+}
+
+.main .services {
+    max-width: 100%;
+    height: 100vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.services h3 {
+    color: #ec0b4b;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.7rem;
+    margin-bottom: 25px;
+}
+
+.services .service-top {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.services .service-top h1 {
+    width: 38%;
+    font-size: 2.8;
+    color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+}
+
+.services .service-top p {
+    width: 55%;
+    font-size: 1rem;
+}
+
+.card-container {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-behavior: smooth;
+}
+
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    position: relative;
+    width: 320px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 25px;
+    transition: 0.5s;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card:hover .card-body {
+    opacity: 1;
+}
+
+.card-body {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: #ed0631;
+    padding: 10px;
+    transition: all .5s ease-in-out;
+}
+
+.name {
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.dec {
+    color: #fff;
+    opacity: 0.8;
+    margin: 5px 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.card-body svg {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.read-btn {
+    width: 150px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body .read-btn a {
+    color: #ed0631;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.card-body .read-btn span svg {
+    width: 30px;
+    height: 30px;
+    color: #ec0b4b;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.read-btn:hover {
+    background-color: #b8afaf;
+    transform: scale(1.05);
+}
+
+
+.main .choose-us {
+    max-width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.choose-us h3 {
+    font-size: 2rem;
+    color: #ed0631;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 30px;
+}
+
+.choose-us h1 {
+    font-size: 3rem;
+    color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+.choose-us .qualities {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.choose-us .qualities .quality-menu {
+    width: 20%;
+    margin-right: 30px;
+}
+
+.choose-us .qualities .quality-menu svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.main .project {
+    max-width: 100%;
+    max-height: 150vh;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.project .project-head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.project .project-head h3 {
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ed0631;
+    margin-bottom: 20px;
+}
+
+.project .project-head h1 {
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.project .project-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project .project-box .left {
+    width: 60%;
+    height: 100%;
+}
+
+.project .project-box .left img {
+    width: 100%;
+    height: 100%;
+}
+
+.project .project-box .right {
+    width: 38%;
+}
+
+.project .project-box .right .desc {
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.project .project-box .right .desc h4 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.project .project-box .right .desc p {
+    font-size: 1.2rem;
+}
+
+.project .project-box .right .active {
+    background-color: #ed0631;
+    color: #fff;
+}
+
+.main .growth {
+    max-width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.growth .growth-head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.growth .growth-head h3 {
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ed0631;
+    margin-bottom: 20px;
+}
+
+.growth .growth-details {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.growth .growth-details .growth-menu {
+    width: 22%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.growth .growth-details .growth-menu:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.growth .growth-details .growth-menu svg {
+    width: 30px;
+    height: 30px;
+    color: #ed0631;
+    margin-bottom: 10px;
+}
+
+.growth .growth-details .growth-menu h4 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.growth .growth-details .growth-menu p {
+    margin-bottom: 20px;
+}
+
+.main .feedback {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback h3 {
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #f6264c;
+    margin-bottom: 20px;
+}
+
+.feedback h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #090103;
+    margin-bottom: 50px;
+}
+
+.feedback .notes {
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.feedback .notes p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #474747;
+}
+
+.feedback .notes h4 {
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #f40641;
+}
+
+.feedback .notes h4 span {
+    font-weight: 400;
+    color: #bebabb;
+}
+
+.footer {
+    width: 100%;
+    height: 300px;
+    top: 100%;
+    padding: 10px;
+    background-color: #ec0b4b;
+}
+
+.footer .footer-logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-logo img {
+    width: 10%;
+    height: 80px;
+    margin-right: 50px;
+}
